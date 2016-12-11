@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="#firstp">
+	<h2> here we are </h2>
+</div>
+</body>
+<script type="text/javascript">
+var word = "";
+var value = prompt("Enter your number","chose a prime");
+console.log("the value was entered   " + value);
+//  comment out
+//for (i=1; i<101; i++){
+//	if (i % 3===0 && i % 5===0){
+//		word="FizzBuzz";
+//		console.log(word);
+//	}
+//	else if (i % 3 === 0 ){
+//		word="Fizz";
+//		console.log(word);
+//	}
+//	else if (i % 5 === 0) {
+//		word="Buzz";
+//		console.log(word);
+//	}
+//	else {console.log(i);}
+//};
+
+function isPrime(value) {
+    for(var i = 3; i < value; i++) {
+        if(value % i === 0) {
+     //       return false;
+            console.log("True");
+            console.log(value);
+            $("#firstp").append("<p>this is a prime</p>");
+            console.log("should have updated original text");
+            
+        }
+        else {
+        	console.log("false");
+            console.log(value);
+            $("#firstp").append("<p>this is not a prime</p>");
+            console.log("should have updated original text");
+      //  	return true;
+      //  	console.log("true");
+       // 	console.log(value);
+         }
+    }
+    return value > 1;
+};
+
+isPrime(value);
+result=isPrime;
+// console.log(isPrime);
+</script>
+</html>
